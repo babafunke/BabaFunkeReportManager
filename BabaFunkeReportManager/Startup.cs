@@ -15,7 +15,7 @@ namespace BabaFunkeReportManager
             builder.Services.AddScoped<IFileService<Customer>, FileService>();
             builder.Services.AddScoped<IEmailService<Customer>, EmailService>();
             builder.Services
-                .AddFluentEmail("babafunke@babafunke.com") //Enter the Sender's Email 
+                .AddFluentEmail("sender@example.com") //Enter the Sender's Email 
                 .AddSendGridSender("**************"); //Enter your SendGrid Api Key
         }
     }
