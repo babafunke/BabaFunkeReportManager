@@ -50,7 +50,7 @@ namespace BabaFunkeReportManager.Services
 
                 //Send the email
                 var email = await _fluentEmail
-                    .To("hello@wafunkltd.com") //If sending to one email, simply replace the recipients with the email string i.e. To("example@example.com")
+                    .To(recipients) //Or use To("example@example.com") if sending to one email
                     .Subject($"Registered Customers Report for {DateTime.Now}")
                     .Body("See attached the list of registered customers.")
                     .Attach(attachment)
