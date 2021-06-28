@@ -23,13 +23,13 @@ namespace BabaFunkeReportManager
 
         /// <summary>
         /// The TimerTrigger that's run on schedule. Adjust the property to run based on your preference.
-        /// This [TimerTrigger("0 00 16 * * *")] runs once daily at exactly 4 PM
+        /// This [TimerTrigger("0 0 16 * * *")] runs once daily at exactly 4 PM
         /// To run every minute, use [TimerTrigger("0 */1 * * * *")]
         /// To run at 5 AM daily, use [TimerTrigger("0 0 5 * * *")]
         /// </summary>
         /// <returns></returns>
         [FunctionName("ReportManagerJob")]
-        public async Task Run([TimerTrigger("0 00 16 * * *")]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 0 16 * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
